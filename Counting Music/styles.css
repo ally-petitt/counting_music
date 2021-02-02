@@ -13,6 +13,7 @@
     --accent-font: "Play", Verdana;
     --secondary-font: "Comfortaa", "Gill Sans";
     --light-background: #fff;
+    --mid-background: #888;
     --dark-background: #333;
     --main-font-color: #000;
     --accent-font-color: tan;
@@ -24,13 +25,13 @@ html {
 }
 
 header {
-    background: tan;
+    background: linear-gradient(to bottom, tan, rgba(15, 13, 10, 0.2));
     backdrop-filter: blur(2rem);
     width: 100%;
     padding: 1.3rem;
     z-index: 1;
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
 }
 
 header ul {
@@ -45,7 +46,7 @@ header ul {
 
 header a {
     text-decoration: none;
-    color: var(--dark-background);
+    color: var(--main-font-color);
     padding: .3rem;
 }
 
@@ -54,8 +55,8 @@ header button {
     border-radius: .4rem;
     padding: .6rem;
     font-family: var(--secondary-font);
-    border: var(--light-background);
-    background-color: rgb(10, 125, 200);
+    border: var(--mid-background) solid 1px;
+    background-color: var(--dark-background);
     color: var(--light-background);
 }
 
