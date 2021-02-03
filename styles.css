@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Montserrat:wght@300;400&family=Play&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font: "Montserrat", sans-serif;
+    --accent-font: "Play", Verdana;
+    --secondary-font: "Comfortaa", "Gill Sans";
+    --light-background: #fff;
+    --mid-background: #888;
+    --dark-background: #333;
+    --main-font-color: #000;
+    --accent-font-color: tan;
+}
+
+html {
+    font-family: var(--main-font);
+    font-size: 15px;
+}
+
+header {
+    background: rgb(168, 132, 85);
+    backdrop-filter: blur(2rem);
+    width: 100%;
+    padding: 1rem;
+    z-index: 1;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--main-font-color);
+    padding: .3rem;
+    font-weight: 500;
+}
+
+header button {
+    cursor: pointer;
+    border-radius: .4rem;
+    padding: .9rem;
+    font-family: var(--secondary-font);
+    border: var(--mid-background) solid 1px;
+    background-color: var(--dark-background);
+    color: var(--light-background);
+    transition: padding .5s;
+}
+
+header button:hover {
+    background-color: var(--dark-background);
+    padding: .8rem;
+}
+
+
+/*hero section*/
+
+.hero {
+    background: url("photos/hero.jpg") center no-repeat;
+    background-size: cover;
+    height: 83vh;
+}
+
+.full-heading {
+    position: absolute;
+    text-align: center;
+    line-height: 3.4rem;
+    color: var(--light-background);
+    left: 14rem;
+    top: 12rem;
+}
+
+.main-heading {
+    font-size: 2rem;
+    font-family: var(--accent-font);
+    text-shadow: 3px 3px 3px var(--dark-background);
+}
+
+.sub-heading {
+    font-family: var(--secondary-font);
+    color: var(--accent-font-color);
+}
+
+.hero-grid {
+    /*position: absolute allows us to position it based on the screen and not it's original position, like relative.
+    This means that the grid is a little more responsive.*/
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    width: 10rem;
+    top: 8.5rem;
+    right: 30rem;
+}
+
+.hero-grid img {
+    width: 18rem;
+    height: 10rem;
+    border: .5rem white solid;
+    border-radius: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
