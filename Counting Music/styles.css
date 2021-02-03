@@ -103,6 +103,7 @@ header button:hover {
 .sub-heading {
     font-family: var(--secondary-font);
     color: var(--accent-font-color);
+    letter-spacing: .07rem;
 }
 
 .hero-grid {
@@ -151,6 +152,7 @@ header button:hover {
     order: 1;
     margin: 2rem;
     margin-right: 5rem;
+    border-radius: .4rem;
 }
 
 .content {
@@ -184,11 +186,13 @@ header button:hover {
     order: -1;
     margin: 1rem;
     flex: 1 2 45rem;
+    border-radius: 1rem;
 }
 
 .our-mission .text {
     order: 0;
     margin: 1rem;
+    margin-bottom: 2rem;
     flex: 1 1 20rem;
 }
 
@@ -204,32 +208,119 @@ header button:hover {
 .music-for-everyone .between {
     background: url("photos/music-for-everyone.jpg") center no-repeat;
     background-size: cover;
-    height: 75vh
+    height: 75vh;
+    margin-bottom: 7.6rem;
 }
 
 .between {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    line-height: 2;
     color: var(--light-background);
     letter-spacing: .25rem;
+    font-size: 2rem;
     text-shadow: 4px 4px 4px var(--dark-background);
     border-radius: .3rem;
 }
 
-.music-for-everyone h3 {
-   font-family: var(--cursive-font);
-   color: var(--accent-font-color);
+.portfolio {
+    margin-top: 3rem;
+}
+
+.music-for-everyone .portfolio .text h3 {
+   font-family: var(--secondary-font);
+   color: var(--dark-background);
 }
 
 .music-for-everyone .text {
     font-size: 2rem;
+    margin: 2rem auto;
+    font-family: var(--secondary-font);
+}
+
+.cursive {
+    font-family: var(--cursive-font);
+    color: #888;
+}
+
+.music-for-everyone .underline {
+    border-bottom: var(--accent-font-color) .2rem solid;
+    border-radius: .5rem;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexbox img {
+    max-width: 25rem;
+    margin: 1rem;
+    border-radius: .5rem;
+}
+
+/*More info*/
+.info-content {
+    text-align: center;
+    margin: 2rem 0;
+    line-height: 2.5rem;
+}
+
+.info-content .heading {
+    display: inline;
+    font-size: 2rem;
+    margin-bottom: .4rem;
+    border-bottom: var(--accent-font-color) 2px solid;
+}
+
+.gray-out {
+    color: #888;
+}
+
+/*Footer*/
+.footer {
+    background: var(--dark-background);
+    border-radius: .5rem;
+    text-align: center;
+    height: 40vh;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.email-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    transform: translateY(2.5rem);
+    line-height: 3rem;
+}
+
+.footer input[type="text"] {
+    padding: .65rem;
+    border-radius: 1rem;
+}
+
+.footer button[type="submit"] {
+    padding: .65rem;
+    font-family: var(--main-font);
+    color: white;
+    border-radius: 1rem;
+    background-color: rgb(177, 73, 41);
 }
 
 
 
 
 
+/*media queries*/
 
 
 
@@ -237,3 +328,4 @@ header button:hover {
 
 
 
+/*keyframes*/
