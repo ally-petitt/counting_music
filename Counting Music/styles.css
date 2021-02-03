@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Montserrat:wght@300;400&family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 *,
 *::before,
@@ -16,13 +17,16 @@
     --mid-background: #888;
     --dark-background: #333;
     --main-font-color: #000;
-    --accent-font-color: tan;
+    --accent-font-color: rgb(216, 188, 152);
     --border-color: white;
+    --cursive-font: "Courgette", cursive;
+    --navbar-color: rgb(168, 132, 85);
 }
 
 html {
     font-family: var(--main-font);
     font-size: 15px;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -31,7 +35,7 @@ html {
 
 header {
     position: fixed;
-    background: rgb(168, 132, 85);
+    background: var(--navbar-color);
     width: 100%;
     padding: 1rem;
     z-index: 1;
@@ -49,7 +53,7 @@ header ul {
     font-size: 1.2rem;
 }
 
-header a {
+a {
     text-decoration: none;
     color: var(--main-font-color);
     padding: .3rem;
@@ -58,7 +62,7 @@ header a {
 
 header button {
     cursor: pointer;
-    border-radius: .4rem;
+    border-radius: 1rem;
     padding: .9rem;
     font-family: var(--secondary-font);
     border: var(--border-color) solid 3px;
@@ -92,7 +96,7 @@ header button:hover {
 
 .main-heading {
     font-size: 2rem;
-    font-family: var(--accent-font);
+    font-family: var(--cursive-font);
     text-shadow: 3px 3px 3px var(--dark-background);
 }
 
@@ -123,9 +127,9 @@ header button:hover {
 .full-heading button {
     position: relative;
     top: .6rem;
-    padding: 1.2rem;
+    padding: 1.1rem;
     border: .3rem var(--border-color) solid;
-    border-radius: .2rem;
+    border-radius: 1rem;
     background-color: rgb(131, 112, 87);
     font-family: var(--main-font);
     color: white;
@@ -154,7 +158,6 @@ header button:hover {
 }
 
 .text {
-    order: 2;
     width: 50%;
     margin-top: 5rem;
     text-align: center;
@@ -162,6 +165,65 @@ header button:hover {
     align-items: center;
     line-height: 4rem;
     font-size: 1.35rem;
+}
+
+.about-us .text {
+    order: 2;
+}
+
+/*Our Mission*/
+.our-mission .content {
+    display: flex;
+    margin: 1rem;
+}
+
+.our-mission img {
+    height: 22.5rem;
+    width: 45rem;
+    /*It only worked with a negative value LOL*/
+    order: -1;
+    margin: 1rem;
+    flex: 1 2 45rem;
+}
+
+.our-mission .text {
+    order: 0;
+    margin: 1rem;
+    flex: 1 1 20rem;
+}
+
+.our-mission a {
+    color: var(--navbar-color);
+}
+
+.our-mission a:hover {
+    text-decoration: underline;
+}
+
+/*Music for everyone*/
+.music-for-everyone .between {
+    background: url("photos/music-for-everyone.jpg") center no-repeat;
+    background-size: cover;
+    height: 75vh
+}
+
+.between {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-background);
+    letter-spacing: .25rem;
+    text-shadow: 4px 4px 4px var(--dark-background);
+    border-radius: .3rem;
+}
+
+.music-for-everyone h3 {
+   font-family: var(--cursive-font);
+   color: var(--accent-font-color);
+}
+
+.music-for-everyone .text {
+    font-size: 2rem;
 }
 
 
