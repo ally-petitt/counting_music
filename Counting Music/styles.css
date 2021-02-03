@@ -25,10 +25,10 @@ html {
 }
 
 header {
-    background: linear-gradient(to bottom, tan, rgba(15, 13, 10, 0.2));
+    background: rgb(168, 132, 85);
     backdrop-filter: blur(2rem);
     width: 100%;
-    padding: 1.3rem;
+    padding: 1rem;
     z-index: 1;
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
@@ -48,16 +48,23 @@ header a {
     text-decoration: none;
     color: var(--main-font-color);
     padding: .3rem;
+    font-weight: 500;
 }
 
 header button {
     cursor: pointer;
     border-radius: .4rem;
-    padding: .6rem;
+    padding: .9rem;
     font-family: var(--secondary-font);
     border: var(--mid-background) solid 1px;
     background-color: var(--dark-background);
     color: var(--light-background);
+    transition: padding .5s;
+}
+
+header button:hover {
+    background-color: var(--dark-background);
+    padding: .8rem;
 }
 
 
@@ -68,6 +75,50 @@ header button {
     background-size: cover;
     height: 83vh;
 }
+
+.full-heading {
+    position: absolute;
+    text-align: center;
+    line-height: 3.4rem;
+    color: var(--light-background);
+    left: 14rem;
+    top: 12rem;
+}
+
+.main-heading {
+    font-size: 2rem;
+    font-family: var(--accent-font);
+    text-shadow: 3px 3px 3px var(--dark-background);
+}
+
+.sub-heading {
+    font-family: var(--secondary-font);
+    color: var(--accent-font-color);
+}
+
+.hero-grid {
+    /*position: absolute allows us to position it based on the screen and not it's original position, like relative.
+    This means that the grid is a little more responsive.*/
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    width: 10rem;
+    top: 8.5rem;
+    right: 30rem;
+}
+
+.hero-grid img {
+    width: 18rem;
+    height: 10rem;
+    border: .5rem white solid;
+    border-radius: 1rem;
+}
+
+
+
+
+
 
 
 
