@@ -27,6 +27,7 @@ html {
     font-family: var(--main-font);
     font-size: 15px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .container {
@@ -37,7 +38,7 @@ header {
     position: fixed;
     background: var(--navbar-color);
     width: 100%;
-    padding: 1rem;
+    padding: .4rem;
     z-index: 1;
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
@@ -60,6 +61,16 @@ a {
     font-weight: 500;
 }
 
+.border-trans {
+    padding: .3rem;
+    transition: all ease-in .4s;
+}
+
+.border-trans:hover {
+    border-bottom: white solid 1.5px;
+    border-top: white solid 1.5px;
+}
+
 header button {
     cursor: pointer;
     border-radius: 1rem;
@@ -68,12 +79,12 @@ header button {
     border: var(--border-color) solid 3px;
     background-color: var(--dark-background);
     color: var(--light-background);
-    transition: padding .5s;
+    transition: font-size ease-in .2s;
 }
 
 header button:hover {
-    background-color: var(--dark-background);
-    padding: .8rem;
+    background-color: #444;
+    font-size: .95rem;
 }
 
 
@@ -148,6 +159,10 @@ header button:hover {
     color: white;
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+.full-heading button:hover {
+    background-color: rgb(116, 99, 77);
 }
 
 /*About Us*/
@@ -326,6 +341,13 @@ header button:hover {
     color: white;
     border-radius: 1rem;
     background-color: rgb(177, 73, 41);
+    cursor: pointer;
+}
+
+.copywrite-info {
+    font-size: 1rem;
+    font-family: monospace;
+    margin-top: 1rem;
 }
 
 /*media queries*/
@@ -381,9 +403,38 @@ header button:hover {
 }
 
 
+/*animation assignining*/
+.scale-down {
+    animation: scale-down .5s;
+}
 
+.slide-right {
+    animation: slide-right 2s;
+}
 
+.fadeIn {
+    animation: fadeIn .5s forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
 
 
 
 /*keyframes*/
+@keyframes scale-down {
+    0% {
+        transform: scale(2.5);
+    }
+    100% {transform: scale(1)}
+}
+
+@keyframes slide-right {
+    0% {transform: translateX(-100vw);}
+    100% {transform: translateX(0vw);}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1;}
+}
+
