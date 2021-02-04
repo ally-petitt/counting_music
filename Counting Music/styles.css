@@ -87,12 +87,17 @@ header button:hover {
 
 .full-heading {
     position: absolute;
-    text-align: center;
     line-height: 3.4rem;
     color: var(--light-background);
-    left: 14rem;
-    top: 12rem;
+    width: 50vw;
+    height: 83vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
+
 
 .main-heading {
     font-size: 2rem;
@@ -112,10 +117,12 @@ header button:hover {
     position: absolute;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.5rem;
-    width: 10rem;
-    top: 8.5rem;
-    right: 30rem;
+    grid-gap: 5vh;
+    align-items: center;
+    justify-items: center;
+    width: 50vw;
+    left: 50vw;
+    top: 20vh;
 }
 
 .hero-grid img {
@@ -123,6 +130,11 @@ header button:hover {
     height: 10rem;
     border: .5rem white solid;
     border-radius: 1rem;
+}
+
+.hero-grid:nth-child(2),
+.hero-grid:last-child {
+    margin-right: 10vw;
 }
 
 .full-heading button {
@@ -316,11 +328,57 @@ header button:hover {
     background-color: rgb(177, 73, 41);
 }
 
-
-
-
-
 /*media queries*/
+@media screen and (max-width: 1245px) {
+    /*hero section*/
+    .hero-grid {
+        display: none;
+    }
+
+    .full-heading {
+        width: 100vw;
+    }
+
+    /*about us + our mission*/
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .about-us img {
+        display: none;
+    }
+
+    .our-mission .text {
+        order: 2;
+    }
+
+    .our-mission img {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    /*navbar*/
+    .navbar li:not(.sign-up),
+    .navbar li:not(.log-in) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .our-mission img {
+        background-size: cover;
+    }
+    
+    .container {
+        font-size: .3rem;
+    }
+}
 
 
 
